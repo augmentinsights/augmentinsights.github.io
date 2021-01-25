@@ -23,41 +23,6 @@
         position: relative;
       }
 
-      /* Extra small devices (phones, 600px and down) */
-      @media only screen and (max-width: 600px) {
-        .iframe-container {
-          padding-top: 180.25%;
-        }
-      }
-
-      /* Small devices (portrait tablets and large phones, 600px and up) */
-      @media only screen and (min-width: 600px) {
-        .iframe-container {
-          padding-top: 133.25%;
-        }
-      }
-
-      /* Medium devices (landscape tablets, 768px and up) */
-      @media only screen and (min-width: 768px) {
-        .iframe-container {
-          padding-top: 71.25.25%;
-        }
-      }
-
-      /* Large devices (laptops/desktops, 992px and up) */
-      @media only screen and (min-width: 992px) {
-        .iframe-container {
-          padding-top: 56.25%;
-        }
-      }
-
-      /* Extra large devices (large laptops and desktops, 1200px and up) */
-      @media only screen and (min-width: 1200px) {
-        .iframe-container {
-          padding-top: 56.25%;
-        }
-      }
-
       .iframe-container iframe {
          border: 0;
          height: 100%;
@@ -74,8 +39,11 @@
 
   </head>
   <body>
-    <div class="iframe-container">
+    <div class="iframe-container" id="iframe-container">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScuEXroj-LCOSuyKRkH1HmLwvkEdS9wFJgTQZw77MCImd6HbA/viewform" allowfullscreen>Loading…</iframe>
     </div>
   </body>
+  <script type="text/javascript">
+    document.getElementById("iframe-container").setAttribute("style","padding-top:"+window.innerHeight+"px");
+  </script>
 </html>
