@@ -25,6 +25,18 @@
         user-select: none;
       }
 
+      a,
+      a:active,
+      a:visited
+       {
+      	color: inherit;
+      	text-decoration: inherit;
+      }
+      a:hover {
+      	color: inherit;
+      	text-decoration: underline;
+      }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -52,12 +64,15 @@
   </main>
 
   <footer class="mt-auto text-white-50">
-    <p>&copy; 2021 Augment Insights</p>
+    <p>&copy; 2021 Augment Insights — <a id="at-link" href=""><span id="at"></span><a/></p>
     <p>Located in Rockville, MD and Walnut Creek, CA</p>
   </footer>
 </div>
-
-
     
   </body>
+  <script type="text/javascript">
+  	var at = "b"+"r"+"a"+"n"+"d"+"o"+"n"+"@"+"augmentinsights"+"."+"com";
+  	document.getElementById("at").innerHTML = at;
+  	document.getElementById("at-link").setAttribute("href","mailto:"+at);
+  </script>
 </html>
