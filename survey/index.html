@@ -45,6 +45,11 @@
     </div>
   </body>
   <script type="text/javascript">
-    document.getElementById("iframe-container").setAttribute("style","padding-top:"+window.innerHeight+"px");
+
+    function screenResize() {
+      document.getElementById("iframe-container").setAttribute("style","padding-top:"+window.innerHeight+"px");  
+    }
+    window.addEventListener("load", screenResize, false);
+    window.addEventListener("resize", screenResize, false);
   </script>
 </html>
